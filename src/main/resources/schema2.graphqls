@@ -1,0 +1,18 @@
+type Song {
+  id: ID!
+  title: String!
+  duration: Int!
+  genre: String!
+  artist: Artist!
+}
+
+type Artist {
+   id: ID!
+   name: String!
+   country: String!
+   songs: [Song]
+}
+
+type SongQueries {
+   allSongs: [Song]
+}
