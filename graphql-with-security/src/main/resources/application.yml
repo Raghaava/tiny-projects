@@ -1,0 +1,5 @@
+okta:
+  oauth2:
+    issuer: {baseUrl}/oauth2/default
+    clientId:
+    scopes: 'email profile openid'
