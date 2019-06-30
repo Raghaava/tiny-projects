@@ -10,12 +10,15 @@
     <version>1.0-SNAPSHOT</version>
     <modules>
         <module>graphql-with-annotations</module>
+        <module>graphql-with-security</module>
+        <module>Okta-Show-Token</module>
+        <module>jwt-security</module>
     </modules>
 
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.0.3.RELEASE</version>
+        <version>2.0.1.RELEASE</version>
         <relativePath />
     </parent>
 
