@@ -19,7 +19,7 @@ import org.springframework.security.web.authentication.UsernamePasswordAuthentic
 
 @Configuration
 @EnableWebSecurity
-@EnableGlobalMethodSecurity
+@EnableGlobalMethodSecurity(prePostEnabled = true)
 public class JwtSecurityConfig extends WebSecurityConfigurerAdapter {
     @Autowired
     private JwtAuthenticationProvider authenticationProvider;
@@ -38,7 +38,7 @@ public class JwtSecurityConfig extends WebSecurityConfigurerAdapter {
                 .csrf()
                 .disable()
                 .authorizeRequests()
-                .antMatchers("/hello")
+                .antMatchers("/hello/**","/user/**")
                 .authenticated()
                 .and()
                 .exceptionHandling()

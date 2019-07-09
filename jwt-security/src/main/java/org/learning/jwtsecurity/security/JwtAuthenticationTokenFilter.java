@@ -19,7 +19,7 @@ import java.io.IOException;
  */
 public class JwtAuthenticationTokenFilter extends AbstractAuthenticationProcessingFilter {
     public JwtAuthenticationTokenFilter() {
-        super("/hello");
+        super("/user/**");
     }
 
     @Override
@@ -30,7 +30,7 @@ public class JwtAuthenticationTokenFilter extends AbstractAuthenticationProcessi
         if (StringUtils.isEmpty(authrozation)) {
             throw new RuntimeException("JWT token is missing");
         }
-        String token = authrozation.substring(6);
+        String token = authrozation;
         JwtAuthenticationToken jwtAuthenticationToken = new JwtAuthenticationToken(token);
         return getAuthenticationManager().authenticate(jwtAuthenticationToken);
     }

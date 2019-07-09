@@ -13,6 +13,7 @@
         <module>graphql-with-security</module>
         <module>Okta-Show-Token</module>
         <module>jwt-security</module>
+        <module>file-resource-download</module>
     </modules>
 
     <parent>
